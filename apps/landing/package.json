@@ -1,0 +1,12 @@
+{
+  "name": "@runmcp/landing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node --check src/main.js && node scripts/build.mjs",
+    "typecheck": "node --check src/main.js",
+    "test": "node test.mjs"
+  }
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RunMCP gives your preferred AI agent a secure, explicit running-coach workspace." />
+    <title>RunMCP — Your agent, your running plan</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <nav aria-label="Main navigation">
+        <a class="wordmark" href="#top" aria-label="RunMCP home">run<span>MCP</span></a>
+        <a class="text-link" href="#connect">Connection guide</a>
+      </nav>
+
+      <section class="hero" id="top">
+        <h1>Your coach can think.<br />Your calendar stays <em>yours.</em></h1>
+        <p class="lede">RunMCP is the secure MCP workspace for the AI agent you choose to coach with. It keeps your goals, runs, calendar, and changes in one accountable place.</p>
+        <div class="actions">
+          <a class="button" href="#connect">See connection options</a>
+          <a class="quiet-link" href="#how-it-works">How it works <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="workflow" id="how-it-works" aria-labelledby="workflow-title">
+        <div class="section-heading"><h2 id="workflow-title">A coach with context, not a black box.</h2></div>
+        <ol>
+          <li><strong>01 / Connect your agent</strong><span>Authorize your preferred AI agent to use your RunMCP account.</span></li>
+          <li><strong>02 / Set goals and intensity</strong><span>Choose conservative, balanced, or ambitious, then save the facts your agent needs.</span></li>
+          <li><strong>03 / Review a proposed calendar</strong><span>Your agent reasons about training and submits a clear plan or patch with a rationale.</span></li>
+          <li><strong>04 / Talk through real life</strong><span>Log runs, illness, time off, and other activities with your agent. It proposes the next revision explicitly.</span></li>
+        </ol>
+      </section>
+
+      <section class="architecture" aria-labelledby="architecture-title">
+        <div><h2 id="architecture-title">Every change has a path.</h2><p>Your agent brings the coaching judgment. RunMCP validates ownership and versions, then stores the agreed calendar and its history.</p></div>
+        <div class="flow" role="img" aria-label="Your agent connects to authenticated RunMCP MCP, which stores account-scoped records in the database">
+          <div><b>Your AI agent</b><span>reasoning &amp; coaching</span></div><i aria-hidden="true">→</i>
+          <div><b>Authenticated<br />RunMCP MCP</b><span>permissions &amp; versions</span></div><i aria-hidden="true">→</i>
+          <div><b>Your records</b><span>calendar &amp; history</span></div>
+        </div>
+      </section>
+
+      <section class="principles" aria-labelledby="principles-title">
+        <div class="section-heading"><h2 id="principles-title">Training is a conversation.</h2></div>
+        <div class="cards"><article><h3>Explicit</h3><p>Completed runs and interruptions are facts. They never auto-rewrite your plan.</p></article><article><h3>Versioned</h3><p>Each applied calendar revision has an expected version, reason, and rationale.</p></article><article><h3>Auditable</h3><p>Goals, activities, connections, and calendar revisions leave an account-scoped trail.</p></article></div>
+      </section>
+
+      <section class="connect" id="connect" aria-labelledby="connect-title">
+        <p class="eyebrow">GETTING STARTED</p><h2 id="connect-title">Hosted connection is coming soon.</h2>
+        <p>RunMCP’s production connection depends on completed OAuth and deployment setup. There is no public sign-up or hosted URL yet. Developers can run the authenticated local MCP adapter today.</p>
+        <pre aria-label="Local MCP configuration example"><code>{
+  "mcpServers": {
+    "RunMCP": {
+      "command": "npm",
+      "args": ["run", "mcp", "--workspace=@runmcp/mcp"],
+      "cwd": "/Users/jwives/Code/RunMCP"
+    }
+  }
+}</code></pre>
+        <p class="fine-print">Local mode is for development. Production will use authenticated, account-scoped connections; permission can be revoked and records are not public.</p>
+      </section>
+    </main>
+    <footer><span>RunMCP</span><span>Agent-first running records</span><a href="https://modelcontextprotocol.io/" rel="noreferrer">Built on MCP ↗</a></footer>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

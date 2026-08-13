@@ -1,0 +1,5 @@
+name = "runmcp-api"
+main = "src/index.ts"
+compatibility_date = "2026-08-07"
+
+# Add the D1 binding from wrangler.example.toml after creating the database.

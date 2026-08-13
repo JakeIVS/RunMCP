@@ -1,0 +1,6 @@
+{
+  "name": "@runmcp/mcp", "version": "0.1.0", "private": true, "type": "module",
+  "scripts": { "start": "tsx src/index.ts", "start:remote": "tsx src/remote.ts", "build": "tsc --outDir dist --noEmit false", "typecheck": "tsc --noEmit", "test": "tsx test.ts" },
+  "dependencies": { "@runmcp/service": "*", "@modelcontextprotocol/sdk": "^1.30.0", "express": "^5.2.1", "jose": "^6.2.8", "zod": "^3.24.1" },
+  "devDependencies": { "tsx": "^4.19.2", "typescript": "^5.7.2", "@types/node": "^22.10.5", "@types/express": "^5.0.5" }
+}

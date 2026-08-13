@@ -1,0 +1,7 @@
+{
+  "name": "@runmcp/core",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": { "test": "tsx test.ts" },
+  "devDependencies": { "tsx": "^4.19.2", "typescript": "^5.7.2" }
+}

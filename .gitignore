@@ -1,0 +1,8 @@
+# Kept locally for reference; intentionally excluded from active repository work.
+/archive/legacy-web/
+**/.runmcp-*.json
+node_modules/
+/apps/landing/dist/
+/apps/api/worker-configuration.d.ts
+/apps/api/.wrangler/
+/packages/*/dist/

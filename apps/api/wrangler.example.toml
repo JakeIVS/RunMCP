@@ -1,0 +1,10 @@
+name = "runmcp-api"
+main = "src/index.ts"
+compatibility_date = "2026-08-07"
+
+# Copy this file to wrangler.toml after `wrangler d1 create runmcp` and replace
+# the ID below. Do not commit real credentials; the Worker receives D1 as a binding.
+[[d1_databases]]
+binding = "DB"
+database_name = "runmcp"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
