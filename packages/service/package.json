@@ -14,8 +14,7 @@
     "test": "tsx test.ts"
   },
   "dependencies": {
-    "@runmcp/core": "*",
-    "@supabase/supabase-js": "^2.49.1"
+    "@runmcp/core": "*"
   },
   "devDependencies": {
     "@types/node": "^22.10.5",

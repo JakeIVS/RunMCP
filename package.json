@@ -9,7 +9,6 @@
     "typecheck": "npm run typecheck -w @runmcp/service && npm run typecheck -w @runmcp/mcp && npm run typecheck -w @runmcp/landing && npm run typecheck -w @runmcp/api",
     "test": "npm run test -w @runmcp/core && npm run test -w @runmcp/service && npm run test -w @runmcp/mcp && npm run test -w @runmcp/landing && npm run test -w @runmcp/api",
     "mcp": "npm run start -w @runmcp/mcp",
-    "mcp:remote": "npm run start:remote -w @runmcp/mcp",
     "web": "npm run dev -w @runmcp/landing",
     "api": "npm run dev -w @runmcp/api"
   }

@@ -53,8 +53,8 @@ export class PlanVersionConflictError extends Error {
 }
 
 /**
- * The only persistence port used by coaching commands. Production supplies the
- * Supabase adapter; file and memory adapters exist only for local/test use.
+ * The persistence port used by coaching commands. The local MCP uses a file
+ * adapter; the deployed API persists data in Cloudflare D1.
  */
 export interface RunnerRepository {
   ensure(identity: AuthenticatedIdentity): Promise<State>;

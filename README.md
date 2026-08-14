@@ -25,13 +25,11 @@ The stdio adapter persists state in `.runmcp-local.json`; it never uses a module
 }
 ```
 
-The local adapter uses one configured local subject (`RUNMCP_LOCAL_SUBJECT`), which is useful for development only. Production uses verified Clerk bearer tokens and Supabase.
+The local adapter uses one configured local subject (`RUNMCP_LOCAL_SUBJECT`), which is useful for development only. The deployed API uses verified Clerk bearer tokens and Cloudflare D1.
 
 ## Public landing page
 
 `apps/landing` is the active read-only RunMCP landing/onboarding surface. It explains the agent-first workflow and shows an accurate local MCP configuration without inventing a hosted sign-up flow. Run `npm run web` to serve it locally at `http://127.0.0.1:4173`, or deploy the generated `apps/landing/dist` directory as static files after `npm run build`.
-
-The former rich frontend stays preserved and ignored at `archive/legacy-web`; it is not an active product workspace.
 
 ## Agent workflow
 
@@ -48,9 +46,7 @@ confirmation candidate. Planned workouts may include structured `sections` and
 
 Logging a run, illness, missed day, or outside activity only stores a fact. It never silently changes the calendar. `apply_schedule_proposal` is the only calendar mutation, and it uses optimistic version control plus an audit record. RunMCP does not send notifications; agents can read `get_next_workout` for their own user-authorized automation.
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for Supabase, Clerk, remote MCP, PKCE, and security setup.
-
-## Cloudflare option
+## Cloudflare deployment
 
 `apps/api` is a Hono-on-Cloudflare-Workers API foundation with a D1 schema and OIDC token boundary. It is a strong deployment fit when the custom domain, API, and database should live on Cloudflare. See [CLOUDFLARE.md](CLOUDFLARE.md) for the short architecture and configuration path. No Cloudflare account or deployment is required to work locally.
 

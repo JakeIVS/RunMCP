@@ -1,5 +1,3 @@
-# Kept locally for reference; intentionally excluded from active repository work.
-/archive/legacy-web/
 **/.runmcp-*.json
 node_modules/
 /apps/landing/dist/
